@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package proto;
+import "google/api/annotations.proto";
+
+option go_package = "../proto";
+
+message TaxCalculatorRequest {
+    float tds = 1;
+    float rentalAllowance = 2;
+    float incomeFromOtherSources = 3;
+    float loanAmount = 4;
+    float totalIncome = 5;
+}
+
+message TaxCalculatorResponse {
+    float result = 1;
+}
+
+service TaxCalculatorService {
+    rpc CalculateTax(TaxCalculatorRequest) returns (TaxCalculatorResponse){
+        option (google.api.http) = {
+            get: "/v1/tax"
+        };
+    }
+}
