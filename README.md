@@ -24,11 +24,7 @@
 #### To run tests:
 #####    *make test*
 ##
-#### To run load tests(sending 200 requests at a time):
-#####    *make load-test*
-###### Used ghz project https://github.com/bojand/ghz - needs installation on local
 
 #
 ## NOTE
-#### *Client implementation for protobufs have 2 types of dummy requests - Buying a house and Renting a house, and currently client code calls with a request returning buying a house*
-#### *For Rest, Postman collections are available in the folder*
+#### *Client implementation is present along*
